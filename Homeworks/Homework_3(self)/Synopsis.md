@@ -1,10 +1,3 @@
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
-
 ### О МЕТОДЕ  .count()
 .count() - это метод, внутри которого реализуется алгоритм подсчета.
 
