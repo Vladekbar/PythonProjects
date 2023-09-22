@@ -64,4 +64,3 @@ dictionary = {'up': 'verh', 'left': 'levo', 'down': 'vniz', 'right': 'pravo'}
      print(k, v) # k - key (Ключ), v - value(Значение)
  print(dictionary.items()) # Вывод списка, где каждый элемент является кортежем.
 '''
-
