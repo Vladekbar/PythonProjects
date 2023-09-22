@@ -11,19 +11,41 @@ d['w'] = 'werty '
 print(d['w' ])
 '''
 
+# dictionary = {}
+# dictionary = {'up': 'verh', 'left': 'levo', 'down': 'vniz', 'right': 'pravo'}
+# print(dictionary)
+# print(dictionary['right'])
+# dictionary['left'] = 'eto'
+#
+# print(dictionary['left'])
+# print(dictionary)
+# v = dictionary # можно сохранить словарь в переменной
+# print(v)
+#
+# del dictionary['up'] # удаление ключа
+# print(v)
+#
+# for item in dictionary:
+#     print('{}: {}')
+
+
 dictionary = {}
 dictionary = {'up': 'verh', 'left': 'levo', 'down': 'vniz', 'right': 'pravo'}
+
+if dictionary['up'] == 'levo':
+    del dictionary['up']
 print(dictionary)
-print(dictionary['right'])
-dictionary['left'] = 'eto'
 
-print(dictionary['left'])
-print(dictionary)
-v = dictionary # можно сохранить словарь в переменной
-print(v)
 
-del dictionary['up'] # удаление ключа
-print(v)
-
-for item in dictionary:
-    print('{}: {}')
+# dictionary['left'] = 'eto'
+#
+# print(dictionary['left'])
+# print(dictionary)
+# v = dictionary # можно сохранить словарь в переменной
+# print(v)
+#
+# del dictionary['up'] # удаление ключа
+# print(v)
+#
+# for item in dictionary:
+#     print('{}: {}')
