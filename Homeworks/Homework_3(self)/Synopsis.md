@@ -126,8 +126,3 @@ print(l_1.index(max(l_1))) # 4 Вывод ИНДЕКСА максимально�
 print(l_1[(l_1.index(max(l_1)))]) # 5 Вывод МАКСИМАЛЬНОГО элемента.
 
 ```
-
-<kbd style="background-color: black; color: white;">&lt;</kbd> Раз
-
-
-<span style="background-color: black; color: white; padding: 2px;">&lt;</span> ДВА
