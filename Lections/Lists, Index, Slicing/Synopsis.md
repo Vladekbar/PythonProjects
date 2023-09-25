@@ -1,3 +1,6 @@
+&#9757; Важно! **Вызов метода** = Объект.Метод(аргументы)
+
+
 ### Задача 1. "Первое и последнее вхождение"
 * Дана строка. Если в этой строке буква f встречается только один раз, выведите её индекс. 
 * Если она встречается два и более раз, выведите индекс её первого и последнего появления.
@@ -41,9 +44,9 @@ except ValueError:
 s = input()
 a = s.find('h')
 b = s.rfind('h')
-fragment_1 = s[:a]
-fragment_2 = s[b+1:]
-print(fragment_1 + fragment_2)
+slice_1 = s[:a]
+slice_2 = s[b+1:]
+print(slice_1 + slice_2)
 ```
 *Решение через срезы*. 
 
@@ -52,17 +55,12 @@ print(fragment_1 + fragment_2)
 * Осуществляется, например, как в нашей задаче через оператор **+**
 * Также возможно через метод **str.join()**
 
-(чисто для примера, не очень практично для данной задачи):
-
+Пример этой же задачи, решенной с помощью метода  **str.join()**.
 ```python
 s = 'In the hole in the ground there lived a hobbit'
 a = s.find('h')
 b = s.rfind('h')
-fragment_1 = s[:a]
-fragment_2 = s[b+1:]
-together = fragment_1 + fragment_2
-result = "".join(together)
-print(together)
+print("".join([s[:a], s[b+1:]]))
 ```
 >Результат
 > >In tobbit
