@@ -4,12 +4,15 @@
 * Если буква f в данной строке не встречается, ничего не выводите.
 
 ```python
-text = input('Введите слово')
+text = input('Введите слово: ')
 
 try:
-    first_occurrence = text.find('f')
-    last_occurrence = text.rfind('f')
-    print(first_occurrence, last_occurrence)
+    first_occurrence = text.index('f')
+    last_occurrence = text.rindex('f')
+    if first_occurrence == last_occurrence:
+        print(first_occurrence)
+    else:
+        print(first_occurrence, last_occurrence)
 except ValueError:
     pass
 ```
