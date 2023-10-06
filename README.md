@@ -280,3 +280,53 @@ print(min(l_1)) # 1 Вывод минимального элемента
 print(l_1.index(max(l_1))) # 4 Вывод ИНДЕКСА максимального элемента
 print(l_1[(l_1.index(max(l_1)))]) # 5 Вывод МАКСИМАЛЬНОГО элемента.
 ```
+## Лекция 3. Функции, рекурсия, алгоритмы.
+### Алгоритм быстрой сортировки
+```python
+def quicksort(arr):
+    if len(arr) < 2:
+        return arr
+    else:
+        pivot = arr[0]
+        less = [x for x in arr[1:] if x <= pivot]
+        greater = [x for x in arr[1:] if x > pivot]
+        return quicksort(greater) + [pivot] + quicksort(less)
+
+list_2 = [7, 8, 1, 10, 5, 0]
+sorted_list_2 = quicksort(list_2)
+print(sorted_list_2)
+#  [10, 8, 7, 5, 1, 0] Вывод списка в порядке убывания значения элементов.
+```
+***Чтобы понять рекурсию - нужно понять рекурсию***. 
+>&#9757; 
+**Самостоятельно** - рекомндую вручную, с помощью карандаша и бумаги разложить рекурсию, чтобы окончательно понять, как она работает. Очень интересная вещь.
+### Пару примеров от себя
+```python
+def sortlist(arr):
+    if len(arr) < 2:
+        return arr
+    else:
+        min_val = min(arr)
+        del arr[arr.index(min(arr))]
+        return [min_val] + sortlist(arr)
+
+list_1 = [7, 8, 1, 10, 5, 0, 5]
+print(sortlist(list_1))
+# [0, 1, 5, 5, 7, 8, 10]
+```
+**sortlist** - это рекурсивная функция, которая сортирует переданный ей список в порядке возрастания значения элементов.
+Если мы хотим, чтобы элементы не повторялись, в теле кода после ```else:``` проведем небольшие изменения.
+```python
+def sortlist(arr):
+    if len(arr) < 2:
+        return arr
+    else:
+        min_val = min(arr)
+        arr = [x for x in arr if x != min_val]  # удалит все вхождения минимального элемента
+        return [min_val] + sortlist(arr)
+
+list_1 = [7, 8, 1, 10, 5, 0, 5]
+print(sortlist(list_1))
+# [0, 1, 5, 7, 8, 10]
+```
+
