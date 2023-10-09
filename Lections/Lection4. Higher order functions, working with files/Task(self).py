@@ -32,3 +32,18 @@ def generate(array):
 generate(list_1) # Вызов функции напрямую. List_2 теперь изменен.
 print(list_2)
 # Вывод видоизмененного List_2. [(2, 4), (8, 64), (38, 1444)]
+
+# Используя lambda (Методичка)
+def select(f, array): # Передадим ей какую-то фунцию и какой-то список
+    return [f(x) for x in array] # Какую-то функцию применяем ко всем элементам списка.
+def where(f, array): # Передадим ей какую-то фунцию и какой-то список
+    return [x for x in array if f(x)] # применяем ко всем элементам списка толко в том случае,
+    # если у нас выполнилось f(x)
+
+list_1 = [1, 2, 3, 5, 8, 15, 23, 38]
+res = select(int, list_1) # хотите с нулями - впишите float
+print(res)  # [1, 2, 3, 5, 8, 15, 23, 38]
+res = where(lambda x: x % 2 == 0, res)
+print(res) # [2, 8, 38]
+res = list(select(lambda x: (x, x**2), res))
+print(res) # [(2, 4), (8, 64), (38, 1444)]
