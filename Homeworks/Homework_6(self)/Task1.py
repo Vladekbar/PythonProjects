@@ -7,6 +7,7 @@ max_number = 10
 list_2 = []
 
 for i in range(len(list_1)):
-    if list_1[i] >= min_number and list_1[i] <= max_number:
-        print(i)
+    if min_number <= list_1[i]:
+        if max_number >= list_1[i]:
+            print(i)
 
