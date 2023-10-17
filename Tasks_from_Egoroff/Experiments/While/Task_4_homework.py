@@ -11,7 +11,6 @@ day = 0
 while socks > 0:
     socks -= 1
     day += 1
-    print(f'{day}-й день.')
     if day % mama_day == 0:
         print(f'Мама пришла на {day}-й день.')
         socks += 1
